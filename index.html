@@ -1,0 +1,46 @@
+<html>
+<head>
+<title>Name Sort App by Pratham</title>
+<style>
+*{font-size:40px;}
+body{background-color:lightyellow;}
+h1{background-color:black;color:white;width:70%;border-radius:30px;}
+input[type=submit]{background-color:lightblue;color:black;}
+</style>
+<body>
+<center>
+<h1>Name Sorter</h1>
+<form onsubmit = "sort()">
+<input type="text" id="string" placeholder="enter the string"/>
+</br></br>
+<input type="submit" value="sort"/>
+</form>
+<h2 id="msg"/>
+<script>
+function sort()
+{
+event.preventDefault();
+let string = document.getElementById("string");
+let msg = document.getElementById("msg");
+
+if (string.value === "")
+{
+alert("please enter the value");
+msg.innerHTML =  "" ;
+string.focus();
+return;
+}
+let name = string.value;
+let sname = name.split("").sort().join("");
+msg.innerHTML = sname;
+}
+</script>
+</center>
+<body>
+</html>
+
+
+
+
+
+
